@@ -10,7 +10,6 @@ class Game {
         if (this.turn > 1) {
             this.turn = 0;
         }
-
         this.reRender();
     }
 
@@ -41,7 +40,6 @@ class Game {
 
     attack(weaponId) {
         let attackWeapon = this.players[this.turn].getWeapon(weaponId);
-
         this.players.forEach((player, index) => {
             if (index !== this.turn) {
                 player.wasAttacked(attackWeapon);
